@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
   s.name                  = 'MentalDice-Swift'
   s.version               = '1.1.6'
   s.summary               = 'Swift frameworks to communicate with Marc Antoine\'s Mental Dice & Kinetic Mental Dice'
-  s.homepage              = 'https://dodymagic.com'
+  s.homepage              = 'https://www.facebook.com/groups/digitalmagicclub'
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
   s.author                = { 'Guillaume Bellut' => 'guillaume@bellut.com' }
-  s.source                = { :git => 'https://github.com/DodyMagic/mentaldice_swift.git', :tag => s.version.to_s }
+  s.source                = { :git => 'https://github.com/digital-magic-club/mentaldice-swift.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.source_files          = 'Sources/**/*'
   s.swift_versions        = ['5.0']

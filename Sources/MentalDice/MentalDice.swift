@@ -16,9 +16,9 @@ public protocol MentalDiceDelegate: AnyObject {
 }
 
 @MainActor
-public class MentalDice: NSObject {
-    
-    public static let shared = MentalDice()
+public class MentalDiceManager: NSObject {
+
+    public static let shared = MentalDiceManager()
 
     public weak var delegate: MentalDiceDelegate?
     public var dice = [Die(color: .white),
@@ -42,7 +42,7 @@ public class MentalDice: NSObject {
 
 }
 
-extension MentalDice: @preconcurrency DiceReachabilityDelegate {
+extension MentalDiceManager: @preconcurrency DiceReachabilityDelegate {
 
     func didConnect() {
         delegate?.didConnect()

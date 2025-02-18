@@ -12,7 +12,7 @@ import MentalDice
 @MainActor
 class DiceCollector: ObservableObject {
     @Published var connected = false
-    @Published var dice = MentalDice.shared.dice
+    @Published var dice = MentalDiceManager.shared.dice
     @Published var detectedColor: Die.Color? {
         didSet {
             if detectedColor != nil {
@@ -24,16 +24,16 @@ class DiceCollector: ObservableObject {
     }
 
     init() {
-        let mentalDice = MentalDice.shared
+        let mentalDice = MentalDiceManager.shared
         mentalDice.delegate = self
     }
 
     func connect() {
-        MentalDice.shared.connect()
+        MentalDiceManager.shared.connect()
     }
 
     func disconnect() {
-        MentalDice.shared.disconnect()
+        MentalDiceManager.shared.disconnect()
     }
 }
 
